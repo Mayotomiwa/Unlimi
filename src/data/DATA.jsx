@@ -2,15 +2,20 @@ import axios from "axios";
 
 const cache = {};
 
- const fetchData = async () => {
-  if (cache["http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX"]) {
-    return cache["http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX"];
+const fetchData = async () => {
+  const url = "http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX";
+  
+  if (cache[url]) {
+    return cache[url];
   } else {
-    const res = await axios.get(
-      "http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX"
-    );
-    cache["http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX"] = res.data;
-    return res.data;
+    try {
+      const res = await axios.get(url);
+      cache[url] = res.data;
+      return res.data;
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      throw error; // Re-throw the error to be handled by the calling code
+    }
   }
 };
 
