@@ -3,7 +3,7 @@ import axios from "axios";
 const cache = {};
 
 const fetchData = async () => {
-  const url = "http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX";
+  const url = "https://3.88.1.181:8000/products/public/catalog?supplier=FragranceX"; // Updated to HTTPS
   
   if (cache[url]) {
     return cache[url];
