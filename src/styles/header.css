@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.search-form {
+  position: relative;
+  width: 25%;
+  background-color: #fff;
+  border-color: black;
+  border-radius: 20;
+  margin-top: 10px;
+}
+.input-with-icon {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 21rcap;
+  transform: translateY(-50%);
+  color: #ccc;
+  pointer-events: none; /* Ensures the icon doesn't block interaction with the input field */
+}
+.search-control {
+    width: 100%;
+    padding-left: 3vh;
+}
+.search-control::placeholder {
+    font-style: Poppins;
+    padding-left: 1vh;
+}
+
+.input-with-icon .form-control {
+  padding-right: 30px; /* Adds space for the icon */
+}
+
+.profile-img {
+    border-radius: 50px;
+}
+.user-name{
+    font-style: Inter;
+}

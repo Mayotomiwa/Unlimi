@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+.header-row {
+    background-color: #b4a7fe;
+}
+.table-header{
+    font-family: Poppins;
+    font-weight: 300;
+
+}
+  
